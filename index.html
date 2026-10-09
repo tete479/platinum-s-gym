@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0b0b0b">
-    <meta name="description" content="PLATNUM'GYM: entrena con propósito, supera tus límites y alcanza tu mejor versión. Descubre nuestros planes y clases.">
+    <meta name="description" content="PLATINUM'S GYM: entrena con propósito, supera tus límites y alcanza tu mejor versión.">
 
-    <title>PLATNUM'GYM | Tu mejor versión comienza aquí</title>
+    <title>PLATINUM'S GYM | Tu mejor versión comienza aquí</title>
 
     <style>
         :root {
             --bg: #0b0b0b;
             --bg-secondary: #111111;
             --card: #191919;
-            --accent: #ff3b30;
-            --accent-hover: #e52d23;
+            --accent: #4169E1;
+            --accent-hover: #2748B8;
             --text: #ffffff;
             --text-muted: #aaaaaa;
             --border: #292929;
@@ -43,11 +43,6 @@
             overflow: hidden;
         }
 
-        img {
-            display: block;
-            max-width: 100%;
-        }
-
         a {
             color: inherit;
         }
@@ -61,10 +56,6 @@
         .container {
             width: min(var(--container), calc(100% - 40px));
             margin-inline: auto;
-        }
-
-        .accent {
-            color: var(--accent);
         }
 
         /* NAVEGACIÓN */
@@ -92,7 +83,7 @@
 
         .logo {
             display: inline-block;
-            font-size: clamp(21px, 3vw, 28px);
+            font-size: clamp(20px, 3vw, 28px);
             font-weight: 900;
             letter-spacing: 1px;
             color: var(--text);
@@ -151,12 +142,14 @@
         /* HERO */
 
         .hero {
+            min-height: 100vh;
             min-height: 100svh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 130px 20px 70px;
+
             background:
                 linear-gradient(
                     rgba(0, 0, 0, 0.70),
@@ -321,7 +314,9 @@
             border-radius: 0 5px 5px 0;
         }
 
-        .feature h4 {
+        .feature h4,
+        .feature h3 {
+            font-size: 16px;
             margin-bottom: 8px;
         }
 
@@ -445,8 +440,8 @@
             text-align: center;
             background:
                 linear-gradient(
-                    rgba(255, 59, 48, 0.90),
-                    rgba(200, 30, 25, 0.90)
+                    rgba(65, 105, 225, 0.90),
+                    rgba(39, 72, 184, 0.90)
                 ),
                 url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=2000&q=80")
                 center / cover no-repeat;
@@ -539,6 +534,7 @@
                 padding: 15px 25px 25px;
                 background: rgba(0, 0, 0, 0.98);
                 border-bottom: 1px solid var(--border);
+                max-height: calc(100vh - 75px);
                 max-height: calc(100svh - 75px);
                 overflow-y: auto;
             }
@@ -589,6 +585,11 @@
         @media (max-width: 560px) {
             nav {
                 padding-inline: 18px;
+            }
+
+            .logo {
+                font-size: 20px;
+                letter-spacing: 0;
             }
 
             section:not(.hero) {
@@ -663,8 +664,8 @@
     <header>
         <nav aria-label="Navegación principal">
 
-            <a class="logo" href="#inicio" aria-label="PLATNUM'GYM, inicio">
-                PLATNUM<span>'GYM</span>
+            <a class="logo" href="#inicio" aria-label="Platinum's Gym, inicio">
+                PLATINUM<span>'S GYM</span>
             </a>
 
             <button
@@ -741,7 +742,7 @@
                         <h2 class="accent">MÁS QUE UN GIMNASIO</h2>
 
                         <p>
-                            En PLATNUM'GYM creemos que entrenar no se trata
+                            En PLATINUM'S GYM creemos que entrenar no se trata
                             únicamente de levantar pesas. Se trata de
                             disciplina, constancia y de convertirte
                             cada día en una mejor versión de ti mismo.
@@ -780,7 +781,8 @@
                             <article class="feature">
                                 <h3>⏰ Horarios</h3>
                                 <p>
-                                    Horarios flexibles para adaptarnos a ti.
+                                    Lunes a viernes: 5:00 AM a 9:00 PM.
+                                    Sábados: 6:00 AM a 12:00 PM.
                                 </p>
                             </article>
 
@@ -938,8 +940,8 @@
         <div class="footer-content">
 
             <div class="footer-brand">
-                <a class="logo" href="#inicio" aria-label="PLATNUM'GYM, inicio">
-                    PLATNUM<span>'GYM</span>
+                <a class="logo" href="#inicio" aria-label="Platinum's Gym, inicio">
+                    PLATINUM<span>'S GYM</span>
                 </a>
 
                 <p>
@@ -949,23 +951,23 @@
             </div>
 
             <div>
-                <h2>Contacto</h2>
+                <h3>Contacto</h3>
 
-                <!-- Sustituye estos datos por los datos reales del gimnasio. -->
                 <p>📍 San Pedro Sula, Honduras</p>
+
                 <p>📞 +504 0000-0000</p>
+
                 <p>
                     ✉️
-                    <a href="mailto:info@fitzone.com">
-                        info@fitzone.com
+                    <a href="mailto:info@platinumsgym.com">
+                        info@platinumsgym.com
                     </a>
                 </p>
             </div>
 
             <div>
-                <h2>Síguenos</h2>
+                <h3>Síguenos</h3>
 
-                <!-- Agrega aquí las URL reales de tus redes sociales. -->
                 <p><a href="#contacto">Instagram</a></p>
                 <p><a href="#contacto">Facebook</a></p>
                 <p><a href="#contacto">TikTok</a></p>
@@ -976,7 +978,7 @@
         <div class="footer-bottom">
             <p>
                 © <span id="current-year">2026</span>
-                PLATNUM'GYM. Todos los derechos reservados.
+                PLATINUM'S GYM. Todos los derechos reservados.
             </p>
         </div>
     </footer>
@@ -984,7 +986,7 @@
     <script>
         "use strict";
 
-        // Menú de navegación adaptable a móviles.
+        // Menú de navegación para celulares.
         const menuToggle = document.querySelector(".menu-toggle");
         const navLinks = document.querySelector(".nav-links");
         const navItems = document.querySelectorAll(".nav-links a");
@@ -992,6 +994,7 @@
         function closeMenu() {
             navLinks.classList.remove("open");
             document.body.classList.remove("menu-open");
+
             menuToggle.setAttribute("aria-expanded", "false");
             menuToggle.setAttribute("aria-label", "Abrir menú");
             menuToggle.querySelector("span").textContent = "☰";
@@ -1001,11 +1004,13 @@
             const isOpen = navLinks.classList.toggle("open");
 
             document.body.classList.toggle("menu-open", isOpen);
+
             menuToggle.setAttribute("aria-expanded", String(isOpen));
             menuToggle.setAttribute(
                 "aria-label",
                 isOpen ? "Cerrar menú" : "Abrir menú"
             );
+
             menuToggle.querySelector("span").textContent =
                 isOpen ? "✕" : "☰";
         }
@@ -1022,16 +1027,15 @@
             }
         });
 
-        // Actualiza el año automáticamente.
-        document.getElementById("current-year").textContent =
-            new Date().getFullYear();
-
-        // Cierra el menú si se cambia a una pantalla de escritorio.
         window.addEventListener("resize", function () {
             if (window.innerWidth > 900) {
                 closeMenu();
             }
         });
+
+        // Actualizar automáticamente el año del copyright.
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
     </script>
 
 </body>
