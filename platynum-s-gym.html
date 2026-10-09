@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b0b0b">
+    <meta name="description" content="PLATINUM'S GYM en San Pedro Sula, Honduras. Conoce nuestros planes, clases y horarios.">
+
+    <title>PLATINUM'S GYM | Tu mejor versión comienza aquí</title>
+
+    <style>
+        :root {
+            --negro: #0b0b0b;
+            --negro-claro: #111111;
+            --tarjeta: #191919;
+            --azul: #4169E1;
+            --azul-hover: #2748B8;
+            --blanco: #ffffff;
+            --gris: #aaaaaa;
+            --borde: #292929;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--azul);
+            outline-offset: 4px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: calc(100% - 40px);
+            margin: 0 auto;
+        }
+
+        /* NAVEGACIÓN */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.94);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        nav {
+            max-width: 1200px;
+            min-height: 75px;
+            margin: auto;
+            padding: 12px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            color: var(--blanco);
+            font-size: clamp(19px, 3vw, 28px);
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: var(--azul);
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--azul);
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 44px;
+            height: 44px;
+            border: 1px solid var(--borde);
+            border-radius: 5px;
+            background: transparent;
+            color: var(--blanco);
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* PORTADA */
+
+        .hero {
+            min-height: 100vh;
+            min-height: 100svh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 130px 20px 70px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.70),
+                    rgba(0, 0, 0, 0.88)
+                ),
+                url("imagenes/portada.jpg")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 8vw, 90px);
+            line-height: 0.98;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--azul);
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 0 auto 35px;
+            color: #dddddd;
+            font-size: clamp(16px, 2vw, 20px);
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 13px 28px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--azul);
+            color: var(--blanco);
+        }
+
+        .btn-primary:hover {
+            background: var(--azul-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border-color: var(--blanco);
+            color: var(--blanco);
+        }
+
+        .btn-secondary:hover {
+            background: var(--blanco);
+            color: var(--negro);
+        }
+
+        /* SECCIONES GENERALES */
+
+        section:not(.hero) {
+            padding: 85px 0;
+            scroll-margin-top: 75px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(30px, 5vw, 42px);
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .section-title h2 span {
+            color: var(--azul);
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #999999;
+            line-height: 1.7;
+        }
+
+        /* NOSOTROS */
+
+        .about {
+            background: var(--negro-claro);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            min-height: 430px;
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.12),
+                    rgba(0, 0, 0, 0.30)
+                ),
+                url("imagenes/gimnasio.jpg")
+                center / cover no-repeat;
+        }
+
+        .about-text h2 {
+            font-size: clamp(27px, 4vw, 35px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .about-text > p {
+            color: var(--gris);
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .feature {
+            padding: 18px;
+            background: #1a1a1a;
+            border-left: 3px solid var(--azul);
+            border-radius: 0 5px 5px 0;
+        }
+
+        .feature h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: var(--gris);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* PLANES INFORMATIVOS */
+
+        .plans {
+            background: var(--negro);
+        }
+
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 22px;
+        }
+
+        .plan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px 22px;
+            background: #151515;
+            border: 1px solid var(--borde);
+            border-radius: 10px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .plan:hover {
+            transform: translateY(-5px);
+            border-color: var(--azul);
+        }
+
+        .plan.featured {
+            background: #141a2b;
+            border: 2px solid var(--azul);
+        }
+
+        .plan-label {
+            display: inline-block;
+            padding: 5px 12px;
+            margin-bottom: 12px;
+            border-radius: 20px;
+            background: var(--azul);
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .plan h3 {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            color: var(--azul);
+            font-size: clamp(28px, 3.5vw, 38px);
+            line-height: 1.3;
+            font-weight: 900;
+            margin-bottom: 12px;
+        }
+
+        .plan-description {
+            padding-top: 8px;
+            margin-top: auto;
+            color: #bbbbbb;
+            font-size: 14px;
+        }
+
+        /* CLASES Y HORARIOS */
+
+        .classes {
+            background: var(--negro-claro);
+        }
+
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        .class-card {
+            padding: 30px;
+            background: var(--tarjeta);
+            border: 1px solid transparent;
+            border-radius: 8px;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--azul);
+        }
+
+        .class-icon {
+            font-size: 35px;
+            margin-bottom: 18px;
+        }
+
+        .class-card h3 {
+            margin-bottom: 12px;
+            font-size: 20px;
+            line-height: 1.4;
+        }
+
+        .class-card > p {
+            color: #999999;
+            line-height: 1.7;
+        }
+
+        .class-schedule {
+            margin-top: 22px;
+            padding: 16px;
+            background: #101010;
+            border-left: 3px solid var(--azul);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .schedule-label {
+            display: inline-block;
+            color: var(--azul);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .class-schedule p {
+            color: var(--blanco);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .class-schedule strong {
+            color: var(--blanco);
+        }
+
+        /* CONTACTO Y PIE DE PÁGINA */
+
+        footer {
+            padding: 50px 20px 25px;
+            background: #050505;
+            scroll-margin-top: 75px;
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto 35px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand p {
+            max-width: 350px;
+            margin-top: 10px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #999999;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        footer a:not(.logo) {
+            color: #999999;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:not(.logo):hover {
+            color: var(--azul);
+        }
+
+        .contact-link {
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: auto;
+            padding-top: 20px;
+            border-top: 1px solid #222222;
+            color: #777777;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        /* DISEÑO RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 75px;
+                left: 0;
+                right: 0;
+                display: none;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+                padding: 15px 25px 25px;
+                background: rgba(0, 0, 0, 0.98);
+                border-bottom: 1px solid var(--borde);
+                max-height: calc(100vh - 75px);
+                overflow-y: auto;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li a {
+                display: block;
+                padding: 14px 10px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-image {
+                min-height: 350px;
+            }
+
+            .plans-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .classes-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 560px) {
+            nav {
+                padding-inline: 18px;
+            }
+
+            .logo {
+                font-size: 19px;
+                letter-spacing: 0;
+            }
+
+            section:not(.hero) {
+                padding: 65px 0;
+            }
+
+            .hero {
+                padding: 120px 18px 60px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+                max-width: 300px;
+                margin: auto;
+            }
+
+            .features,
+            .plans-grid,
+            .classes-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-brand {
+                grid-column: auto;
+            }
+
+            .about-image {
+                min-height: 280px;
+            }
+
+            .class-card {
+                padding: 25px;
+            }
+
+            .class-schedule {
+                padding: 14px;
+            }
+
+            .section-title {
+                margin-bottom: 35px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+
+    <header>
+        <nav aria-label="Navegación principal">
+
+            <a class="logo" href="#inicio">
+                PLATINUM<span>'S GYM</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menú"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#planes">Planes</a></li>
+                <li><a href="#clases">Clases</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- PORTADA -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-content">
+
+                <h1>
+                    CONSTRUYE<br>
+                    TU <span>MEJOR</span><br>
+                    VERSIÓN
+                </h1>
+
+                <p>
+                    Entrena con propósito, supera tus límites
+                    y alcanza tus objetivos en un espacio diseñado
+                    para sacar lo mejor de ti.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#planes" class="btn btn-primary">
+                        Ver planes
+                    </a>
+
+                    <a href="#nosotros" class="btn btn-secondary">
+                        Conócenos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- NOSOTROS -->
+
+        <section class="about" id="nosotros">
+
+            <div class="container">
+
+                <div class="about-grid">
+
+                    <div
+                        class="about-image"
+                        role="img"
+                        aria-label="Instalaciones de Platinum's Gym"
+                    ></div>
+
+                    <div class="about-text">
+
+                        <h2>MÁS QUE UN GIMNASIO</h2>
+
+                        <p>
+                            En PLATINUM'S GYM creemos que entrenar
+                            no se trata únicamente de levantar pesas.
+                            Se trata de disciplina, constancia y de
+                            convertirte cada día en una mejor versión
+                            de ti mismo.
+                        </p>
+
+                        <p>
+                            Contamos con instalaciones y equipos
+                            para ayudarte a trabajar por tus objetivos,
+                            con opciones de membresía para diferentes
+                            necesidades.
+                        </p>
+
+                        <div class="features">
+
+                            <div class="feature">
+                                <h3>💪 Equipamiento</h3>
+                                <p>
+                                    Máquinas y equipos para distintos
+                                    tipos de entrenamiento.
+                                </p>
+                            </div>
+
+                            <div class="feature">
+                                <h3>🏆 Entrenamiento</h3>
+                                <p>
+                                    Un espacio para trabajar por
+                                    tus objetivos.
+                                </p>
+                            </div>
+
+                            <div class="feature">
+                                <h3>🔥 Ambiente</h3>
+                                <p>
+                                    Energía y motivación en cada
+                                    entrenamiento.
+                                </p>
+                            </div>
+
+                            <div class="feature">
+                                <h3>⏰ Horarios</h3>
+                                <p>
+                                    <strong>Lunes a viernes:</strong><br>
+                                    5:00 AM a 9:00 PM.
+                                    <br><br>
+                                    <strong>Sábados:</strong><br>
+                                    6:00 AM a 12:00 PM.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PLANES INFORMATIVOS -->
+
+        <section class="plans" id="planes">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>NUESTROS <span>PLANES</span></h2>
+
+                    <p>
+                        Conoce nuestras opciones de membresía y elige
+                        la alternativa que mejor se adapte a ti.
+                        Todos los precios están expresados en lempiras.
+                    </p>
+
+                </div>
+
+                <div class="plans-grid">
+
+                    <article class="plan">
+
+                        <h3>PLAN IND</h3>
+
+                        <p class="price">L 895</p>
+
+                        <p class="plan-description">
+                            Membresía individual.
+                        </p>
+
+                    </article>
+
+                    <article class="plan featured">
+
+                        <span class="plan-label">PRIMER INGRESO</span>
+
+                        <h3>PRIMER MES</h3>
+
+                        <p class="price">L 499</p>
+
+                        <p class="plan-description">
+                            Precio especial para el primer mes.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>PLAN DUO</h3>
+
+                        <p class="price">L 1,690</p>
+
+                        <p class="plan-description">
+                            Entre dos personas: L 845 por persona.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>PLAN 3 PERSONAS</h3>
+
+                        <p class="price">L 2,385</p>
+
+                        <p class="plan-description">
+                            Entre tres personas: L 795 por persona.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>PLAN ESTUDIANTIL</h3>
+
+                        <p class="price">L 695</p>
+
+                        <p class="plan-description">
+                            Plan para estudiantes.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>PLAN DE 15 DÍAS</h3>
+
+                        <p class="price">L 450</p>
+
+                        <p class="plan-description">
+                            Membresía por quince días.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>PLAN TRIMESTRAL</h3>
+
+                        <p class="price">L 2,385</p>
+
+                        <p class="plan-description">
+                            Membresía de tres meses.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>PLAN 6 MESES</h3>
+
+                        <p class="price">L 4,470</p>
+
+                        <p class="plan-description">
+                            Membresía de seis meses.
+                        </p>
+
+                    </article>
+
+                    <article class="plan featured">
+
+                        <span class="plan-label">PLAN ANUAL</span>
+
+                        <h3>12 MESES</h3>
+
+                        <p class="price">L 8,750</p>
+
+                        <p class="plan-description">
+                            Membresía de un año.
+                        </p>
+
+                    </article>
+
+                    <article class="plan">
+
+                        <h3>VISITA</h3>
+
+                        <p class="price">L 120</p>
+
+                        <p class="plan-description">
+                            Precio por visita.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CLASES Y HORARIOS -->
+
+        <section class="classes" id="clases">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h2>NUESTRAS <span>CLASES</span></h2>
+
+                    <p>
+                        Encuentra tu ritmo, supera tus límites
+                        y entrena con nosotros.
+                    </p>
+
+                </div>
+
+                <div class="classes-grid">
+
+                    <!-- ENTRENAMIENTO PERSONALIZADO -->
+
+                    <article class="class-card">
+
+                        <div class="class-icon" aria-hidden="true">
+                            🏋️
+                        </div>
+
+                        <h3>ENTRENAMIENTO PERSONALIZADO</h3>
+
+                        <p>
+                            Entrena con atención personalizada y trabaja
+                            en tus objetivos físicos con una rutina
+                            adaptada a tus necesidades.
+                        </p>
+
+                        <div class="class-schedule">
+
+                            <span class="schedule-label">
+                                DISPONIBILIDAD
+                            </span>
+
+                            <p>
+                                Disponible a cualquier horario.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- SPINNING -->
+
+                    <article class="class-card">
+
+                        <div class="class-icon" aria-hidden="true">
+                            🚴
+                        </div>
+
+                        <h3>SPINNING</h3>
+
+                        <p>
+                            Mejora tu resistencia cardiovascular y disfruta
+                            de una sesión de ciclismo indoor llena de energía.
+                        </p>
+
+                        <div class="class-schedule">
+
+                            <span class="schedule-label">
+                                DÍAS Y HORARIO
+                            </span>
+
+                            <p>
+                                <strong>Lunes y miércoles</strong>
+                            </p>
+
+                            <p>6:00 PM – 7:00 PM</p>
+
+                        </div>
+
+                    </article>
+
+                    <!-- ZUMBA -->
+
+                    <article class="class-card">
+
+                        <div class="class-icon" aria-hidden="true">
+                            💃
+                        </div>
+
+                        <h3>ZUMBA</h3>
+
+                        <p>
+                            Baila, disfruta y mantente activo con sesiones
+                            dinámicas que combinan música y ejercicio.
+                        </p>
+
+                        <div class="class-schedule">
+
+                            <span class="schedule-label">
+                                DÍAS Y HORARIO
+                            </span>
+
+                            <p>
+                                <strong>Lunes, martes y miércoles</strong>
+                            </p>
+
+                            <p>7:00 PM – 8:00 PM</p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- CONTACTO -->
+
+    <footer id="contacto">
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <a class="logo" href="#inicio">
+                    PLATINUM<span>'S GYM</span>
+                </a>
+
+                <p>
+                    Tu espacio para entrenar, crecer
+                    y alcanzar tu mejor versión.
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Contacto</h3>
+
+                <p>📍 San Pedro Sula, Honduras</p>
+
+                <p>
+                    <a
+                        class="contact-link"
+                        href="https://maps.app.goo.gl/jLWvTjqDAjcH8Bwr8?g_st=ic"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Ver ubicación en Google Maps
+                    </a>
+                </p>
+
+                <p>
+                    📞
+                    <a href="tel:+50497206093">
+                        9720-6093
+                    </a>
+                </p>
+
+            </div>
+
+            <div>
+
+                <h3>Síguenos</h3>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://instagram.com/platinums_gymsps?cplk=MXhlYnBhdjViNHJuNg%3D%3D&utm_source=qr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.facebook.com/share/1F5igoUeZE/?mibextid=wwXIfr"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Facebook
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/@platinumsgymsps?_r=1&_t=ZS-9AOyRNDVrMq"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        TikTok
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="current-year">2026</span>
+                PLATINUM'S GYM. Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script>
+        "use strict";
+
+        // Menú desplegable para celulares.
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
+        const navItems = document.querySelectorAll(".nav-links a");
+
+        function closeMenu() {
+            navLinks.classList.remove("open");
+
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Abrir menú");
+            menuToggle.querySelector("span").textContent = "☰";
+        }
+
+        function toggleMenu() {
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Cerrar menú" : "Abrir menú"
+            );
+
+            menuToggle.querySelector("span").textContent =
+                isOpen ? "✕" : "☰";
+        }
+
+        menuToggle.addEventListener("click", toggleMenu);
+
+        navItems.forEach(function (link) {
+            link.addEventListener("click", closeMenu);
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeMenu();
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth > 900) {
+                closeMenu();
+            }
+        });
+
+        // Actualizar automáticamente el año del pie de página.
+        document.getElementById("current-year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+</html>
