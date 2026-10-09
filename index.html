@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0b0b0b">
-    <meta name="description" content="PLATINUM'S GYM en San Pedro Sula, Honduras. Conoce nuestros planes, horarios y servicios.">
+    <meta name="description" content="PLATINUM'S GYM en San Pedro Sula, Honduras. Conoce nuestros planes, clases y horarios.">
 
     <title>PLATINUM'S GYM | Tu mejor versión comienza aquí</title>
 
@@ -361,14 +361,6 @@
             margin-bottom: 12px;
         }
 
-        .price small {
-            display: block;
-            margin-top: 5px;
-            color: #999999;
-            font-size: 13px;
-            font-weight: normal;
-        }
-
         .plan-description {
             padding-top: 8px;
             margin-top: auto;
@@ -376,7 +368,7 @@
             font-size: 14px;
         }
 
-        /* CLASES */
+        /* CLASES Y HORARIOS */
 
         .classes {
             background: var(--negro-claro);
@@ -385,6 +377,7 @@
         .classes-grid {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
+            align-items: stretch;
             gap: 20px;
         }
 
@@ -407,12 +400,41 @@
         }
 
         .class-card h3 {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 20px;
+            line-height: 1.4;
         }
 
-        .class-card p {
+        .class-card > p {
             color: #999999;
             line-height: 1.7;
+        }
+
+        .class-schedule {
+            margin-top: 22px;
+            padding: 16px;
+            background: #101010;
+            border-left: 3px solid var(--azul);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .schedule-label {
+            display: inline-block;
+            color: var(--azul);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .class-schedule p {
+            color: var(--blanco);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .class-schedule strong {
+            color: var(--blanco);
         }
 
         /* CONTACTO Y PIE DE PÁGINA */
@@ -584,6 +606,10 @@
 
             .class-card {
                 padding: 25px;
+            }
+
+            .class-schedule {
+                padding: 14px;
             }
 
             .section-title {
@@ -903,7 +929,7 @@
 
         </section>
 
-        <!-- CLASES -->
+        <!-- CLASES Y HORARIOS -->
 
         <section class="classes" id="clases">
 
@@ -914,50 +940,103 @@
                     <h2>NUESTRAS <span>CLASES</span></h2>
 
                     <p>
-                        Entrena de diferentes maneras y encuentra
-                        la actividad que más disfrutes.
+                        Encuentra tu ritmo, supera tus límites
+                        y entrena con nosotros.
                     </p>
 
                 </div>
 
                 <div class="classes-grid">
 
+                    <!-- ENTRENAMIENTO PERSONALIZADO -->
+
                     <article class="class-card">
 
-                        <div class="class-icon" aria-hidden="true">🥊</div>
+                        <div class="class-icon" aria-hidden="true">
+                            🏋️
+                        </div>
 
-                        <h3>BOXEO</h3>
+                        <h3>ENTRENAMIENTO PERSONALIZADO</h3>
 
                         <p>
-                            Mejora tu resistencia, coordinación
-                            y condición física.
+                            Entrena con atención personalizada y trabaja
+                            en tus objetivos físicos con una rutina
+                            adaptada a tus necesidades.
                         </p>
+
+                        <div class="class-schedule">
+
+                            <span class="schedule-label">
+                                DISPONIBILIDAD
+                            </span>
+
+                            <p>
+                                Disponible a cualquier horario.
+                            </p>
+
+                        </div>
 
                     </article>
 
+                    <!-- SPINNING -->
+
                     <article class="class-card">
 
-                        <div class="class-icon" aria-hidden="true">🏋️</div>
+                        <div class="class-icon" aria-hidden="true">
+                            🚴
+                        </div>
 
-                        <h3>FUNCIONAL</h3>
+                        <h3>SPINNING</h3>
 
                         <p>
-                            Entrenamientos dinámicos para mejorar
-                            fuerza y resistencia.
+                            Mejora tu resistencia cardiovascular y disfruta
+                            de una sesión de ciclismo indoor llena de energía.
                         </p>
+
+                        <div class="class-schedule">
+
+                            <span class="schedule-label">
+                                DÍAS Y HORARIO
+                            </span>
+
+                            <p>
+                                <strong>Lunes y miércoles</strong>
+                            </p>
+
+                            <p>6:00 PM – 7:00 PM</p>
+
+                        </div>
 
                     </article>
 
+                    <!-- ZUMBA -->
+
                     <article class="class-card">
 
-                        <div class="class-icon" aria-hidden="true">🧘</div>
+                        <div class="class-icon" aria-hidden="true">
+                            💃
+                        </div>
 
-                        <h3>YOGA</h3>
+                        <h3>ZUMBA</h3>
 
                         <p>
-                            Trabaja flexibilidad, movilidad
-                            y bienestar mental.
+                            Baila, disfruta y mantente activo con sesiones
+                            dinámicas que combinan música y ejercicio.
                         </p>
+
+                        <div class="class-schedule">
+
+                            <span class="schedule-label">
+                                DÍAS Y HORARIO
+                            </span>
+
+                            <p>
+                                <strong>Lunes, martes y miércoles</strong>
+                            </p>
+
+                            <p>7:00 PM – 8:00 PM</p>
+
+                        </div>
 
                     </article>
 
