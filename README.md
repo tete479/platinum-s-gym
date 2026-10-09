@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FITZONE | Tu mejor versión comienza aquí</title>
+    <title>platinum'gym | Tu mejor versión comienza aquí</title>
 
     <style>
         * {
